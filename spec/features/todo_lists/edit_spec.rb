@@ -1,12 +1,11 @@
 require 'spec_helper'
 
 describe "Editing todo list" do
-	let!(:todo_list) { TodoList.create(title: "Groceries", description: "Grocery list") }
+	let!(:todo_list) { TodoList.create(title: "Groceries", description: "Grocery list.") }
 
 	def update_todo_list(options={})
 		options[:title] ||= "My todo list"
 		options[:description] ||="This is my todo list."
-
 		todo_list = options[:todo_list]
 
 		visit "/todo_lists"
@@ -22,9 +21,7 @@ describe "Editing todo list" do
 
 
 	it "updates a todo list successfully with correct information" do
-			update_todo_list todo_list: todo_list, 
-																		title: "New title",
-																		description: "New description"
+			update_todo_list todo_list: todo_list, title: "New title", description: "New description"
 
 			todo_list.reload
 
@@ -41,7 +38,7 @@ describe "Editing todo list" do
 			expect(page).to have_content("error")
 	end
 
-	it "displays an error with a short title" do
+	it "displays an error with too short title" do
 			update_todo_list todo_list: todo_list, title: "Hi"
 			expect(page).to have_content("error")
 	end

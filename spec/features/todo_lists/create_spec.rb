@@ -4,7 +4,7 @@ describe "Creating todo list" do
 
 	def create_todo_list(options={})
 		options[:title] ||="My todo list"
-		options[:description] ||="This is my todo list description"
+		options[:description] ||="This is my todo list."
 
 		visit "/todo_lists"
 		click_link "New Todo list"
