@@ -26,7 +26,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 group :development, :test do
-	gem 'rspec-rails', '~> 2.0'
+	gem 'rspec-rails', '2.99'
 end
 
 group :test do
