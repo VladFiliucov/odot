@@ -24,12 +24,11 @@ describe TodoList do
 			todo_list.todo_items.create(content: "Eggs")
 			expect(todo_list.has_incomplete_items?).to be_true
 		end
-	end
+
 
 		it "returns false with no incomplted todo list items" do
 			todo_list.todo_items.create(content: "Eggs", completed_at: 1.minute.ago)
 			expect(todo_list.has_incomplete_items?).to be_false
 		end
 	end
-
-
+end
