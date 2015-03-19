@@ -1,9 +1,8 @@
  <% if @todo_item.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@todo_item.errors.count, "error") %> prohibited this todo item from being saved:</h2>
-
      <ul>
-      <% @todo_list.errors.full_messages.each do |message| %>
+      <% @todo_item.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
      </ul>
@@ -14,4 +13,3 @@
 <%= form.text_field :content %>
 
 <%= form.submit "Save" %>
-
