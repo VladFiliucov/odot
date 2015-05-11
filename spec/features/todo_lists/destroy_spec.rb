@@ -9,6 +9,7 @@ let!(:todo_list) { create(:todo_list) }
   end	  
 
   it "is successful when clicking the destroy link" do
+    pending "Deleting todo lists"
     visit "/todo_lists"
 
     within "#todo_list_#{todo_list.id}" do

@@ -7,14 +7,14 @@ describe "Viewing todo items" do
 
 	it "displays the title of the todo list" do
 		visit todo_list_path(todo_list)
-		within("h1.todo_list") do
+		within("h2.page-title") do
 			expect(page).to have_content(todo_list.title)
 		end
 	end
 
 	it "displays no items when a todo list is empty" do
 		visit todo_list_path(todo_list)
-		expect(page.all("ul.todo_items li").size).to eq(0)
+		expect(page.all("table.todo_items tbody tr").size).to eq(0)
 	end	
 
 	it "displays item content when todo list has items" do
