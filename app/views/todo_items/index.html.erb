@@ -1,4 +1,4 @@
-<h2 class="page-title"><%= @todo_list.title %></h2>
+<h2 class="page-title truncate" title="<%= @todo_list.title %>"><%= @todo_list.title %></h2>
 
 <ul class="list todo-items no-bullet">
 	<% @todo_list.todo_items.each do |todo_item| %>
@@ -11,8 +11,8 @@
         <% end %>
       </div>
       <div class="small-10 medium-11 columns truncate todo-content" title="<%= todo_item.content %>">
-      </div>
       <%= link_to todo_item.content, edit_todo_list_todo_item_path(@todo_list, todo_item)%>
+      </div>
     </li>
 	<% end %>
 </ul>
