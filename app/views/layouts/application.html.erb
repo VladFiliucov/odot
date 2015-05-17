@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <title><%= yield :title %>Odot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title><%= yield :title %>Odot</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "vendor/modernizr" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -36,7 +35,7 @@
     </div> 
   </div>
 
-  <footer class="row">
+  <footer class="row global-footer">
     <div class="small-12 small-centered medium-8 medium-centerd large-5 large-centered columns text-center">
       <% if logged_in? %>
         <%= link_to "Settings", edit_user_path(current_user) %>
