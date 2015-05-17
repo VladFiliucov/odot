@@ -27,6 +27,8 @@
 
 
 
+
+
 div.alert {
 	border: 2px solid #aaa;
 	padding: 10px;
@@ -58,6 +60,7 @@ div.nav ul {
 	list-style: none;
 	clear: right;
 	margin: 0 0 0 1em;
+	padding: 0;
 }
 
 div.nav ul li {
@@ -76,4 +79,3 @@ div.nav ul li a:hover {
 	background: #aaa;
 	color: #eee;
 }
-
