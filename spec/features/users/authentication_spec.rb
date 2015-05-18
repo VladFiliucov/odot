@@ -6,9 +6,9 @@ describe "Logging up"  do
 		visit new_user_session_path
 		fill_in "Email Address", with: "filiucov@mail.ru"
 		fill_in "Password", with: "password123"
-		click_button "Log In"
+		click_button "Sign In"
 
-		expect(page).to have_content("Todo list")
+		expect(page).to have_content("Todo Lists")
 		expect(page).to have_content("Thanks for loggin in!")
 
 	end
@@ -17,7 +17,7 @@ describe "Logging up"  do
 		visit new_user_session_path
 		fill_in "Email Address", with: "filiucov@mail.ru"
 		fill_in "Password", with: "incorrect"
-		click_button "Log In"
+		click_button "Sign In"
 
 		expect(page).to have_content("There was a problem loggin in.")
 		expect(page).to have_field("Email Address", with: "filiucov@mail.ru")
