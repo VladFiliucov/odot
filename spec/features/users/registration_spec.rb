@@ -9,7 +9,7 @@ describe "Signing up"  do
 		within("header") { click_link "Sign Up" }
 
 		fill_in "First Name", with: "Vlad"
-		fill_in "Last Name", with: "Filiucov"
+		fill_in "Las Name", with: "Filiucov"
 		fill_in "Email", with: "example@mail.ru"
 		fill_in "Password", with: "password12"
 		fill_in "Password (again)", with: "password12"
