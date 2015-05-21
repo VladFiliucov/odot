@@ -1,5 +1,6 @@
 <%= title "Todo Lists" %>
 
+<% if @todo_lists.size > 0 %>
 <ul class="list todo-lists no-bullet">
 <% @todo_lists.each do |todo_list| %>
   <li id="<%= dom_id(todo_list) %>" class="clearfix">
@@ -10,3 +11,14 @@
   </li>
 <% end %>
 </ul
+
+<% else %>
+	
+	<div class="row blank-slate">
+		<div class="small-12 small-centered columns">
+			<p>You don't have any todo lists!</p>
+			<%= link_to "Add List", new_todo_list_path, class: "button radius" %>
+		</div>
+	</div>
+
+<% end %>
