@@ -17,8 +17,9 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        @user.create_default_lists
         session[:user_id] = @user.id
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to todo_lists_path, notice: 'Thanks for signing up!' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
