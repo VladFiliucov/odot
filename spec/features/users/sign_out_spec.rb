@@ -9,9 +9,9 @@ describe "Logging Out" do
 		fill_in "Password", with: user.password
 		click_button "Sign In"
 
-		expect(page).to have_content("Log Out")
-		click_link "Log Out"
-		expect(page).to_not have_content("Log Out")
-		expect(page).to have_content("Sign In")
+		expect(page).to have_content("Sign Out")
+		click_link "Sign Out"
+		expect(page).to_not have_content("Sign Out")
+		expect(page).to have_content("Log In")
 	end
 end
