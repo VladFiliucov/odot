@@ -6,14 +6,12 @@ describe "Adding todo items" do
 	before { sign_in user, password: "treehouse1" }
 
 	it "is successful with valid content" do
-		visit_todo_list(todo_list)
+    visit_todo_list(todo_list)
 		click_link "Add Todo Item"
 		fill_in "Content", with: "Milk"
 		click_button "Save"
 		expect(page).to have_content("Added todo list item.")
-		within(".todo_items") do
-			expect(page).to have_content("Milk")
-		end
+		expect(page).to have_content("Milk")
 	end
 
 	it "Displays an error with no content" do
