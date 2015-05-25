@@ -64,7 +64,7 @@ class TodoListsController < ApplicationController
     if destination =~ /@/ && notifier.deliver
       redirect_to todo_list_todo_items_path(@todo_list), success: "Todo list sent."
     else
-      redirect_to todo_list_todo_items_path(@todo_list), failure: "Todo list could not be sent."
+      redirect_to todo_list_todo_items_path(@todo_list), error: "Todo list could not be sent."
     end
   end
 

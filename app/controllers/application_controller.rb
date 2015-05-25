@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
-  add_flash_types :success, :failure
+  add_flash_types :success, :error
   protect_from_forgery with: :exception
   rescue_from ActiveRecord::RecordNotFound, with: :render_404
   rescue_from ActiveSupport::MessageVerifier::InvalidSignature, with: :render_error
