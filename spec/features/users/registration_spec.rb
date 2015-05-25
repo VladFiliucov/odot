@@ -6,7 +6,7 @@ describe "Signing up"  do
 
 		visit "/"
 		expect(page).to have_content("Sign Up")
-		within("header") { click_link "Sign Up" }
+		click_link "Sign Up"
 
 		fill_in "First Name", with: "Vlad"
 		fill_in "Las Name", with: "Filiucov"
@@ -20,7 +20,7 @@ describe "Signing up"  do
 
 	it "displays a tutorial when the user signs up" do
 		visit "/"
-		within("header") { click_link "Sign Up" }
+		click_link "Sign Up"
 
 		fill_in "First Name", with: "Vlad"
 		fill_in "Las Name", with: "Filiucov"

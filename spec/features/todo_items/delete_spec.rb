@@ -8,11 +8,9 @@ describe "Deleting todo items" do
 
 
 	it "is successful" do
-		skip "Adding delete link"
 		visit_todo_list(todo_list)
-		within "#todo_item_#{todo_item.id}" do
-			click_link "Delete"
-		end
+		click_on todo_item.content
+		click_link "Delete"
 		expect(page).to have_content("Todo list item was deleted.")
 		expect(TodoItem.count).to eq(0)
 	end	

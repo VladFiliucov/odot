@@ -12,6 +12,6 @@ describe "Logging Out" do
 		expect(page).to have_content("Sign Out")
 		click_link "Sign Out"
 		expect(page).to_not have_content("Sign Out")
-		expect(page).to have_content("Log In")
+		expect(page).to have_content("Sign In")
 	end
 end
