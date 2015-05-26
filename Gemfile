@@ -18,6 +18,10 @@ group :development do
 	gem 'quiet_assets', '~> 1.1.0'
 end
 
+group :production do
+	gem "pg"
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
